@@ -164,6 +164,13 @@ function App() {
         })
         .catch((error) => {
           console.log("api hitting error", error);
+          setSelectQuestionIdx(0);
+          setShowResultScreen(false);
+          setScore(0);
+          setWelcomePage(true);
+          setAnswers(Array(10));
+          formik.setFieldValue("username", "");
+          formik.setFieldValue("email", "");
           window.location.reload();
         });
     },
