@@ -160,11 +160,11 @@ function App() {
           setAnswers(Array(10));
           formik.setFieldValue("username", "");
           formik.setFieldValue("email", "");
-          // window.location.reload();
+          window.location.reload();
         })
         .catch((error) => {
           console.log("api hitting error", error);
-          // window.location.reload();
+          window.location.reload();
         });
     },
   });
