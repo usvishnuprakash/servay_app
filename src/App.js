@@ -140,14 +140,11 @@ function App() {
     },
     onSubmit: (values) => {
       axios
-        .post(
-          "http://ec2-3-108-99-206.ap-south-1.compute.amazonaws.com/survey",
-          {
-            username: values.username,
-            email: values.email,
-            survey_responses: JSON.stringify(answers),
-          }
-        )
+        .post("https://api.storymetrics.ai/survey", {
+          username: values.username,
+          email: values.email,
+          survey_responses: JSON.stringify(answers),
+        })
         .then((response) => {
           console.log("response", response);
 
